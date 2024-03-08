@@ -1,0 +1,59 @@
+plugins {
+    id 'org.springframework.boot' version '3.2.0'
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+    id 'java'
+}
+
+group = 'com.github.Nancy64bit'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '21'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'io.springfox:springfox-swagger2:3.0.0'
+    // testImplementation 'junit:junit:4.13.2'
+    implementation 'io.springfox:springfox-boot-starter:3.0.0' // Updated springfox dependency
+    testImplementation 'org.springframework.boot:spring-boot-starter-test' // Updated Spring Boot test dependency
+    testImplementation 'org.junit.jupiter:junit-jupiter-engine:5.1.1' // JUnit 5 Jupiter Engine dependency
+    testImplementation 'org.junit.platform:junit-platform-runner:1.1.1' // JUnit Platform Runner dependency
+
+}
+
+test {
+    useJUnitPlatform()
+}
+
+
+// plugins {
+//     id 'org.springframework.boot' version '3.2.0'
+//     id 'io.spring.dependency-management' version '1.0.12.RELEASE'
+//     id 'java'
+// }
+
+// group = 'com.github.Nancy64bit'
+// version = '0.0.1-SNAPSHOT'
+// sourceCompatibility = '17'
+// ext['junit-jupiter.version'] = '5.10.2'
+
+
+// repositories {
+//     mavenCentral()
+// }
+
+// dependencies {
+//     implementation 'org.springframework.boot:spring-boot-starter-web'
+//     implementation 'io.springfox:springfox-boot-starter:3.0.0' // Updated springfox dependency
+//     testImplementation(platform('org.junit:junit-bom:5.10.2'))
+// 	testImplementation('org.junit.jupiter:junit-jupiter')
+// 	testRuntimeOnly('org.junit.platform:junit-platform-launcher')    }
+
+// test {
+// 	useJUnitPlatform()
+// 	testLogging {
+// 		events "passed", "skipped", "failed"
+// 	}
+// }
